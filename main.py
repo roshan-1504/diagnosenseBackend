@@ -8,10 +8,13 @@ import time
 import cv2
 import xgboost as xgb
 import os
+'''
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import Model
 from tensorflow.keras.applications import ResNet50, MobileNetV2, InceptionV3
 from tensorflow.keras.layers import GlobalAveragePooling2D, concatenate
+'''
+
 
 app = Flask(__name__)
 CORS(app)
@@ -209,6 +212,8 @@ def predict_ckd():
             "traceback": traceback_str
         }), 500
 
+
+'''
 # ------------------ PNEUMONIA DETECTION ENDPOINT ------------------
 @app.route('/predict_pneumonia', methods=['POST'])
 def predict_pneumonia():
@@ -261,6 +266,9 @@ def predict_pneumonia():
         'Majority Vote Result': label_map[majority_vote],
         'Inference Time (s)': inference_time
     })
+
+'''
+
 
 # ------------------ PROSTATE CANCER ENDPOINT ------------------
 @app.route("/predict_prostate_cancer", methods=["POST"])
