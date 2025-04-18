@@ -5,5 +5,5 @@ numpy
 joblib
 opencv-python
 xgboost
-tensorflow
+#tensorflow
 scikit-learn
